@@ -1,0 +1,8 @@
+{
+    "name": "tetris",
+    "description": "tetris game",
+    "license": "MIT",
+    "dependencies": [
+        "raylib"
+    ]
+}
