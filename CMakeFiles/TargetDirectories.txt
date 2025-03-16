@@ -1,0 +1,3 @@
+C:/Users/M416/Desktop/IT206_DSA_SecoundProject/CMakeFiles/tetris.dir
+C:/Users/M416/Desktop/IT206_DSA_SecoundProject/CMakeFiles/edit_cache.dir
+C:/Users/M416/Desktop/IT206_DSA_SecoundProject/CMakeFiles/rebuild_cache.dir
