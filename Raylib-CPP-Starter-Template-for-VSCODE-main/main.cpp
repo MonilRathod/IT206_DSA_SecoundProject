@@ -1,6 +1,5 @@
 #include <iostream>
 #include <raylib.h>
-
 using namespace std;
 
 int main () {
@@ -12,9 +11,7 @@ int main () {
     int ball_speed_x = 5;
     int ball_speed_y = 5;
     int ball_radius = 15;
-
-    cout << "Hello World" << endl;
-
+    
     InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "My first RAYLIB program!");
     SetTargetFPS(60);
 
