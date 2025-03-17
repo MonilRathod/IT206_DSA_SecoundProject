@@ -7,6 +7,7 @@ game::game()
     blocks = {Iblock(),Lblock(),Jblock(),Oblock(),Sblock()};   
     currentblock = getrandomblock();
     nextblock = getrandomblock(); 
+    gameover = false;
 }
  
 block game::getrandomblock()
@@ -15,7 +16,8 @@ block game::getrandomblock()
     return blocks[random];
 }
 
-void game::draw(){
+void game::draw()
+{
     grid.draw();
     currentblock.draw();
 }
@@ -42,27 +44,37 @@ void game::handleinput()
 
 void game::moveblockleft()
 {
-    currentblock.move(0,-1);
-    if(isblockoutside() || blockfits() == false)
+    if(!gameover)
     {
-        currentblock.move(0,1);
+        currentblock.move(0,-1);
+        if(isblockoutside() || blockfits() == false)
+        {
+            currentblock.move(0,1);
+        }
     }
+
 }
 void game::moveblockright()
 {
-    currentblock.move(0,1);
-    if(isblockoutside() || blockfits() == false)
+    if(!gameover)
     {
-        currentblock.move(0,-1);
+        currentblock.move(0,1);
+        if(isblockoutside() || blockfits() == false)
+        {
+            currentblock.move(0,-1);
+        }
     }
 }
 void game::moveblockdown()
 {
-    currentblock.move(1,0);
-    if(isblockoutside() || blockfits() == false)
+    if(!gameover)
     {
-        currentblock.move(-1,0);
-        lockblock();
+        currentblock.move(1,0);
+        if(isblockoutside() || blockfits() == false)
+        {
+            currentblock.move(-1,0);
+            lockblock();
+        }
     }
 }
 
@@ -74,7 +86,15 @@ void game::lockblock()
         grid.grid[item.row][item.colums] = currentblock.id;
     }
     currentblock = nextblock;
-    nextblock = getrandomblock();
+    if(blockfits() == false)
+    {
+        gameover = true;
+        return;
+    }
+    else
+    {
+        nextblock = getrandomblock();
+    }
     grid.clearfullrows();
 }
 
@@ -93,10 +113,13 @@ bool game::isblockoutside()
 
 void game::rotateblock()
 {
-    currentblock.rotate();
-    if(isblockoutside() || blockfits() == false)
+    if(!gameover)
     {
-        currentblock.undurotation();
+        currentblock.rotate();
+        if(isblockoutside() || blockfits() == false)
+        {
+            currentblock.undurotation();
+        }
     }
 }
 

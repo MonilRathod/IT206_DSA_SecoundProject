@@ -13,6 +13,7 @@ class game
     void moveblockleft();
     void moveblockright();
     void moveblockdown();
+    bool gameover;
    
 
 private:
