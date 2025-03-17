@@ -16,6 +16,8 @@ void move(int row, int colum);
 vector<position> getcellposition();
 int id;
 map<int,vector<position>>cells;
+void rotate();
+void undurotation();
 
 private:
 int cellsize;

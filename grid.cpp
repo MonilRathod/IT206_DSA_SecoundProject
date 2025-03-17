@@ -48,3 +48,10 @@ void Grid::draw()
         }
     }
 
+    bool Grid::iscelloutside(int row, int colum)
+    {
+        if(row >= 0 && row < numrows && colum >= 0 && colum < numcols){
+            return false;
+        }
+        return true;
+    }

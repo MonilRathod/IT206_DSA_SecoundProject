@@ -35,3 +35,21 @@ void block::draw()
         }
         return movedtiles;
  }
+
+ void block::rotate()
+ {
+    rotationstate++;
+    if(rotationstate == (int)cells.size())
+    {
+        rotationstate = 0;
+    }
+ }
+
+ void block::undurotation()
+ {
+    rotationstate--;
+    if(rotationstate == -1)
+    {
+        rotationstate = cells.size()-1;
+    }
+ }

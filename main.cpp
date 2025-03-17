@@ -15,6 +15,7 @@ int main()
         BeginDrawing();
         ClearBackground(getcellcolors()[8]);
         Game.handleinput();
+        Game.moveblockdown();
 
         Game.draw();
         

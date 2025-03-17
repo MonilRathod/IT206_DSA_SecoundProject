@@ -34,20 +34,55 @@ void game::handleinput()
         case KEY_RIGHT:
             moveblockright();
             break;
+        case KEY_UP:
+            rotateblock();
+            break;    
     }
 }
 
 void game::moveblockleft()
 {
     currentblock.move(0,-1);
+    if(isblockoutside())
+    {
+        currentblock.move(0,1);
+    }
 }
 void game::moveblockright()
 {
     currentblock.move(0,1);
+    if(isblockoutside())
+    {
+        currentblock.move(0,-1);
+    }
 }
 void game::moveblockdown()
 {
     currentblock.move(1,0);
+    if(isblockoutside())
+    {
+        currentblock.move(-1,0);
+    }
 }
 
+bool game::isblockoutside()
+{
+    vector<position> tiles = currentblock.getcellposition();
+    for(position item: tiles)
+    {
+        if(grid.iscelloutside(item.row,item.colums))
+        {
+            return true;
+        }
+    }
+    return false;
+}
 
+void game::rotateblock()
+{
+    currentblock.rotate();
+    if(isblockoutside())
+    {
+        currentblock.undurotation();
+    }
+}
