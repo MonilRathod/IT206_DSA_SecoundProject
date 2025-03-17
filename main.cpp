@@ -16,7 +16,7 @@ bool eventtriggered(double interval)
 
 int main()
 {
-    InitWindow(300, 600, "TETRIS");
+    InitWindow(500, 620, "TETRIS");
     SetTargetFPS(60);
 
     game Game = game();

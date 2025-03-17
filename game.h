@@ -24,5 +24,6 @@ private:
     bool isblockoutside();
     void rotateblock();
     bool blockfits();
+    void reset();
     
 };

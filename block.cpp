@@ -15,7 +15,7 @@ void block::draw()
     vector<position> tiles = getcellposition();
     for(position item : tiles)
     {
-        DrawRectangle(item.colums * cellsize+1, item.row * cellsize+1, cellsize-1, cellsize-1, color[id]);
+        DrawRectangle(item.colums * cellsize+11, item.row * cellsize+11, cellsize-1, cellsize-1, color[id]);
     }
 }
  void block::move(int row, int colum)

@@ -25,6 +25,10 @@ void game::draw()
 void game::handleinput()
 {
     int keypressed = GetKeyPressed();
+    if(gameover && keypressed == KEY_R)
+    {
+       reset();
+    }
     switch(keypressed)
     {
         case KEY_DOWN:
@@ -136,3 +140,11 @@ bool game::blockfits()
     return true;
 }
 
+void game::reset()
+{
+    gameover = false;
+    grid.initialize();
+    currentblock = getrandomblock();
+    nextblock = getrandomblock();
+    
+}
