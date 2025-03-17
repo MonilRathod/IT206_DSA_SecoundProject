@@ -43,7 +43,7 @@ void game::handleinput()
 void game::moveblockleft()
 {
     currentblock.move(0,-1);
-    if(isblockoutside())
+    if(isblockoutside() || blockfits() == false)
     {
         currentblock.move(0,1);
     }
@@ -51,7 +51,7 @@ void game::moveblockleft()
 void game::moveblockright()
 {
     currentblock.move(0,1);
-    if(isblockoutside())
+    if(isblockoutside() || blockfits() == false)
     {
         currentblock.move(0,-1);
     }
@@ -59,7 +59,7 @@ void game::moveblockright()
 void game::moveblockdown()
 {
     currentblock.move(1,0);
-    if(isblockoutside())
+    if(isblockoutside() || blockfits() == false)
     {
         currentblock.move(-1,0);
         lockblock();
@@ -93,8 +93,22 @@ bool game::isblockoutside()
 void game::rotateblock()
 {
     currentblock.rotate();
-    if(isblockoutside())
+    if(isblockoutside() || blockfits() == false)
     {
         currentblock.undurotation();
     }
 }
+
+bool game::blockfits()
+{
+    vector<position> tiles = currentblock.getcellposition();
+    for(position item: tiles)
+    {
+        if(grid.iscellempty(item.row,item.colums) == false)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+

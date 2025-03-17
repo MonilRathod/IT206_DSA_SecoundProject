@@ -13,6 +13,7 @@ class game
     void moveblockleft();
     void moveblockright();
     void moveblockdown();
+   
 
 private:
     vector<block>blocks;
@@ -21,5 +22,6 @@ private:
     void lockblock();
     bool isblockoutside();
     void rotateblock();
+    bool blockfits();
     
 };

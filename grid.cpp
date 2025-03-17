@@ -55,3 +55,12 @@ void Grid::draw()
         }
         return true;
     }
+
+    bool Grid::iscellempty(int row, int colum)
+{
+    if(grid[row][colum] == 0)
+    {
+        return true;
+    }
+    return false; 
+}

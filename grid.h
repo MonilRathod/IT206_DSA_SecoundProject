@@ -13,6 +13,7 @@ class Grid
         void print();
         void draw();
         bool iscelloutside(int row, int colum);
+        bool iscellempty(int row, int colum);
         
      
     private:
