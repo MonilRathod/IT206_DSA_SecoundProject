@@ -1,20 +1,20 @@
 #include <raylib.h>
-
+#include "grid.h"
 int main()
 {
-    InitWindow(800, 600, "TETRIS");
+    Color darkblue = { 111,133,151, 255 };
+    InitWindow(300, 600, "TETRIS");
     SetTargetFPS(60);
 
+    Grid grid=Grid();
+    grid.print();
     while (!WindowShouldClose())
+
     {
         BeginDrawing();
-        ClearBackground(RAYWHITE);
+        ClearBackground(darkblue);
+        grid.draw();
 
-        // Draw a rectangle
-        DrawRectangle(200, 200, 100, 100, RED);
-
-        // Draw some text
-        DrawText("Hello, Tetris!", 300, 50, 20, DARKBLUE);
 
         EndDrawing();
     }
