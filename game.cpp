@@ -20,7 +20,20 @@ block game::getrandomblock()
 void game::draw()
 {
     grid.draw();
-    currentblock.draw();
+    currentblock.draw(11,11);
+    switch (nextblock.id)
+    {
+    case 3:
+        nextblock.draw(255,290);
+        break;
+    case 4:
+        nextblock.draw(255,280);
+        break;    
+    
+    default:
+        nextblock.draw(270,270);
+        break;
+    }
 }
 
 void game::handleinput()
@@ -189,5 +202,6 @@ void game::reset()
     grid.initialize();
     currentblock = getrandomblock();
     nextblock = getrandomblock();
+    score = 0;
     
 }

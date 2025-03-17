@@ -24,13 +24,14 @@ int main()
 
 
     game Game = game();
+    float acd = 0.5;
 
 
     while (!WindowShouldClose())
 
     {
         Game.handleinput();
-        if(eventtriggered(0.5))
+        if(eventtriggered(std::max(0.1, acd - Game.score * 0.01)))
         {
             Game.moveblockdown();
         }
@@ -44,7 +45,7 @@ int main()
         Vector2 textsize = MeasureTextEx(font, Text, 38, 2);
         DrawTextEx(font, Text, {310 + (170 - textsize.x)/2, 65}, 38, 2, WHITE);
 
-        
+
 
         DrawTextEx(font, "Next", {365, 175}, 38, 2, WHITE);
         DrawRectangleRounded((Rectangle){320, 215, 170, 180}, 0.3, 6, lightskyblue);
@@ -54,7 +55,6 @@ int main()
             DrawTextEx(font, "GameOver", {320, 450}, 38, 2, WHITE);
             DrawTextEx(font, "Presh R to Restart", {317, 500}, 17, 2, WHITE);
         }
-
         Game.draw();
         EndDrawing();
     }
