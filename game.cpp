@@ -62,7 +62,19 @@ void game::moveblockdown()
     if(isblockoutside())
     {
         currentblock.move(-1,0);
+        lockblock();
     }
+}
+
+void game::lockblock()
+{
+    vector<position> tiles = currentblock.getcellposition();
+    for(position item: tiles)
+    {
+        grid.grid[item.row][item.colums] = currentblock.id;
+    }
+    currentblock = nextblock;
+    nextblock = getrandomblock();
 }
 
 bool game::isblockoutside()

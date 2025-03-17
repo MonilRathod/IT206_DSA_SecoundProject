@@ -1,6 +1,19 @@
 #include <raylib.h>
-#include "colors.h"
 #include "game.h"
+
+double lastupdatetime = 0;
+
+bool eventtriggered(double interval)
+{
+    double currenttime = GetTime();
+    if(currenttime - lastupdatetime >= interval)
+    {
+        lastupdatetime = currenttime;
+        return true;
+    }
+    return false;
+}
+
 int main()
 {
     InitWindow(300, 600, "TETRIS");
@@ -15,7 +28,10 @@ int main()
         BeginDrawing();
         ClearBackground(getcellcolors()[8]);
         Game.handleinput();
-        Game.moveblockdown();
+        if(eventtriggered(0.5))
+        {
+            Game.moveblockdown();
+        }
 
         Game.draw();
         

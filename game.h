@@ -18,6 +18,7 @@ private:
     vector<block>blocks;
     block currentblock;
     block nextblock;
+    void lockblock();
     bool isblockoutside();
     void rotateblock();
     
