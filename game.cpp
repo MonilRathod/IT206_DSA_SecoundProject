@@ -75,6 +75,7 @@ void game::lockblock()
     }
     currentblock = nextblock;
     nextblock = getrandomblock();
+    grid.clearfullrows();
 }
 
 bool game::isblockoutside()

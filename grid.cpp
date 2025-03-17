@@ -64,3 +64,54 @@ void Grid::draw()
     }
     return false; 
 }
+
+int Grid::clearfullrows()
+{
+    int completed = 0;
+    for(int row = numrows-1; row >= 0; row--)
+    {
+        if(isrowfull(row))
+        {
+            clearrow(row);
+            completed++;
+          
+           
+        }
+        else if(completed > 0)
+        {
+            moverowdown(row,completed);
+        }    
+    }
+    return completed;
+}
+
+bool Grid::isrowfull(int row)
+{
+    for (int colums = 0; colums < numcols; colums++)
+    {
+        if(grid[row][colums] == 0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+void Grid::clearrow(int row)
+{
+    for (int colums = 0; colums < numcols; colums++)
+    {
+       grid[row][colums] = 0;
+    }
+}
+
+void Grid::moverowdown(int row, int numrows)
+{
+
+    for (int colums = 0; colums < numcols; colums++)
+    {
+        grid[row+numrows][colums] = grid[row][colums];
+        grid[row][colums] = 0;
+    }
+    
+}

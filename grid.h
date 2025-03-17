@@ -14,6 +14,7 @@ class Grid
         void draw();
         bool iscelloutside(int row, int colum);
         bool iscellempty(int row, int colum);
+        int clearfullrows();
         
      
     private:
@@ -22,6 +23,10 @@ class Grid
         int numcols; 
         int cellsize; 
         vector<Color> color;
+        bool isrowfull(int row);
+        void clearrow(int row);
+        void moverowdown(int row,int numrows);
+
  
  
       
