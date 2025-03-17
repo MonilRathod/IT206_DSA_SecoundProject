@@ -19,6 +19,9 @@ int main()
     InitWindow(500, 620, "TETRIS");
     SetTargetFPS(60);
 
+    Font font = LoadFontEx("resources/ARCADECLASSIC.TTF", 64, 0, 0);
+
+
     game Game = game();
 
 
