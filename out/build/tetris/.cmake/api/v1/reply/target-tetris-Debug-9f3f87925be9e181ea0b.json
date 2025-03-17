@@ -135,6 +135,13 @@
 				5,
 				6
 			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				7
+			]
 		}
 	],
 	"sources" : 
@@ -180,6 +187,11 @@
 			"compileGroupIndex" : 0,
 			"path" : "game.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "ARCADECLASSIC.TTF",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"

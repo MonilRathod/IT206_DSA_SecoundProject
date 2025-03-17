@@ -10,7 +10,7 @@ set(CMAKE_TOOLCHAIN_FILE "C:/Users/M416/vcpkg/scripts/buildsystems/vcpkg.cmake" 
 find_package(raylib CONFIG REQUIRED)
 
 # Create the executable
-add_executable(tetris main.cpp grid.cpp colors.cpp block.cpp blocks.cpp position.cpp game.cpp)
+add_executable(tetris main.cpp grid.cpp colors.cpp block.cpp blocks.cpp position.cpp game.cpp ARCADECLASSIC.TTF)
 
 # Link Raylib
 target_link_libraries(tetris PRIVATE raylib)
