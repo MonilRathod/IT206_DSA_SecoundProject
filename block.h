@@ -12,6 +12,8 @@ class block
 public:
 block();
 void draw();
+void move(int row, int colum);
+vector<position> getcellposition();
 int id;
 map<int,vector<position>>cells;
 
@@ -19,4 +21,6 @@ private:
 int cellsize;
 int rotationstate;
 vector<Color> color;
+int rowoffset;
+int columoffset;
 };

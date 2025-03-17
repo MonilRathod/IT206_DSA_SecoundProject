@@ -12,6 +12,7 @@ class Grid
         int grid[20][10];
         void print();
         void draw();
+        
      
     private:
       

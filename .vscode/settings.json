@@ -110,5 +110,6 @@
         "*.tcc": "cpp",
         "string_view": "cpp",
         "text_encoding": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }

@@ -1,15 +1,12 @@
 #include <raylib.h>
-#include "grid.h"
 #include "colors.h"
-#include "blocks.cpp"
+#include "game.h"
 int main()
 {
     InitWindow(300, 600, "TETRIS");
     SetTargetFPS(60);
 
-    Grid grid=Grid();
-    grid.print();
-    Tblock block =Tblock();
+    game Game = game();
 
 
     while (!WindowShouldClose())
@@ -17,10 +14,10 @@ int main()
     {
         BeginDrawing();
         ClearBackground(getcellcolors()[8]);
-        grid.draw();
-        block.draw();
+        Game.handleinput();
 
-
+        Game.draw();
+        
         EndDrawing();
     }
 

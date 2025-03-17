@@ -10,6 +10,7 @@ public:
         cells[1] = {position(0,1),position(1,1),position(2,1),position(2,2)};
         cells[2] = {position(1,0),position(1,1),position(1,2),position(2,0)};
         cells[3] = {position(0,0),position(0,1),position(1,1),position(2,1)};
+        move(0,3);
     }
 };
 class Jblock : public block
@@ -21,6 +22,7 @@ public:
         cells[1] = {position(0,1),position(0,2),position(1,1),position(2,1)};
         cells[2] = {position(1,0),position(1,1),position(1,2),position(2,2)};
         cells[3] = {position(0,1),position(1,1),position(2,0),position(2,1)};
+        move(0,3);
     }
 };
 
@@ -33,6 +35,7 @@ public:
         cells[1] = {position(0,2),position(1,2),position(2,2),position(3,2)};
         cells[2] = {position(2,0),position(2,1),position(2,2),position(2,3)};
         cells[3] = {position(0,1),position(1,1),position(2,1),position(3,1)};
+        move(-1,3);
     }
 };
 
@@ -42,6 +45,7 @@ public:
     Oblock(){
         id=4;
         cells[0] = {position(0,0),position(0,1),position(1,0),position(1,1)};
+        move(0,4);
     }
 };
 
@@ -54,6 +58,7 @@ public:
         cells[1] = {position(0,1),position(1,1),position(1,2),position(2,2)};
         cells[2] = {position(1,1),position(1,2),position(2,0),position(2,1)};
         cells[3] = {position(0,0),position(1,0),position(1,1),position(2,1)};
+        move(0,3);
     }
 };
 
@@ -66,6 +71,7 @@ public:
         cells[1] = {position(0,1),position(1,1),position(1,2),position(2,1)};
         cells[2] = {position(1,0),position(1,1),position(1,2),position(2,1)};
         cells[3] = {position(0,1),position(1,0),position(1,1),position(2,1)};
+        move(0,3);
     }
 };
 
@@ -78,6 +84,7 @@ public:
         cells[1] = {position(0,2),position(1,1),position(1,2),position(2,1)};
         cells[2] = {position(1,0),position(1,1),position(2,1),position(2,2)};
         cells[3] = {position(0,1),position(1,0),position(1,1),position(2,0)};
+        move(0,3);
     }
 };
 
