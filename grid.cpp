@@ -1,5 +1,6 @@
 #include "grid.h"
 #include <iostream>
+#include "colors.h"
 using namespace std;
 
 
@@ -34,19 +35,6 @@ void Grid::print()
     }
 }
 
-vector<Color> Grid::getcellcolors()
-{
-    Color darkgray = { 167, 206, 240, 255 };
-    Color yello = { 255, 255, 0, 255 };
-    Color green = { 0, 255, 0, 255 };
-    Color purple = { 128, 0, 128, 255 };
-    Color red = { 255, 0, 0, 255 };
-    Color orange = { 255, 165, 0, 255 };
-    Color pink = { 255, 192, 203, 255 };
-    Color blue = { 0, 0, 255, 255 };
-    
-    return {darkgray, yello, green, purple, red, orange, pink, blue};
-}
 
 void Grid::draw()
 {

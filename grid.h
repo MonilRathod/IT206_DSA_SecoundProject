@@ -14,7 +14,7 @@ class Grid
         void draw();
      
     private:
-        vector<Color> getcellcolors();
+      
         int numrows;
         int numcols; 
         int cellsize; 

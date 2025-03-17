@@ -1,7 +1,18 @@
 # ninja log v6
-9	265	7638636211351086	CMakeFiles/tetris.dir/main.cpp.obj	7f0e0e69204b4e94
-266	440	7638636213863910	tetris.exe	597a9f32afb32e8a
-10	591	7638634836186123	CMakeFiles/tetris.dir/grid.cpp.obj	800d49e5fe858053
-59	814	7638998121396607	CMakeFiles/tetris.dir/main.cpp.obj	7f0e0e69204b4e94
-85	1372	7638998121692169	CMakeFiles/tetris.dir/grid.cpp.obj	800d49e5fe858053
-1372	1909	7638998134477642	tetris.exe	597a9f32afb32e8a
+25	562	7639043357001766	CMakeFiles/tetris.dir/main.cpp.obj	7f0e0e69204b4e94
+30	324	7639043901199501	CMakeFiles/tetris.dir/blocks.cpp.obj	196dcaeac48efee4
+97	312	7639046053233576	tetris.exe	2b87f15060b3b6a4
+32	592	7639043357001766	CMakeFiles/tetris.dir/grid.cpp.obj	800d49e5fe858053
+38	352	7639043357160734	CMakeFiles/tetris.dir/colors.cpp.obj	101c5c4eb1145869
+19	96	7639046052476135	CMakeFiles/tetris.dir/position.cpp.obj	9a56d2de568a5440
+24	514	7639043901127281	CMakeFiles/tetris.dir/block.cpp.obj	55c827824bc17f48
+50	147	7639046657592905	CMakeFiles/tetris.dir/position.cpp.obj	9a56d2de568a5440
+30	351	7639046657326507	CMakeFiles/tetris.dir/colors.cpp.obj	101c5c4eb1145869
+43	390	7639046657492512	CMakeFiles/tetris.dir/blocks.cpp.obj	196dcaeac48efee4
+17	554	7639046657254636	CMakeFiles/tetris.dir/main.cpp.obj	7f0e0e69204b4e94
+36	594	7639046657426742	CMakeFiles/tetris.dir/block.cpp.obj	55c827824bc17f48
+23	626	7639046657319775	CMakeFiles/tetris.dir/grid.cpp.obj	800d49e5fe858053
+626	832	7639046663340191	tetris.exe	2b87f15060b3b6a4
+19	354	7639053372298943	CMakeFiles/tetris.dir/blocks.cpp.obj	196dcaeac48efee4
+12	533	7639053372233459	CMakeFiles/tetris.dir/main.cpp.obj	7f0e0e69204b4e94
+533	732	7639053377442146	tetris.exe	2b87f15060b3b6a4
