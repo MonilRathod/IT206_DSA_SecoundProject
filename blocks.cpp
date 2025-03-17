@@ -10,7 +10,7 @@ public:
         cells[1] = {position(0,1),position(1,1),position(2,1),position(2,2)};
         cells[2] = {position(1,0),position(1,1),position(1,2),position(2,0)};
         cells[3] = {position(0,0),position(0,1),position(1,1),position(2,1)};
-        move(-1,3);
+        move(0,3);
     }
 };
 class Jblock : public block
