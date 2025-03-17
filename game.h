@@ -1,10 +1,11 @@
 #pragma once
 #include "grid.h"
 #include "blocks.cpp"
+#include <vector>
 
 class game
 {
-    public:
+public:
     game();
     block getrandomblock();
     Grid grid;
@@ -13,17 +14,18 @@ class game
     void moveblockleft();
     void moveblockright();
     void moveblockdown();
+    void rotateblock();
+    void reset();
+    void harddrop();
     bool gameover;
-   
+    int score;
 
 private:
-    vector<block>blocks;
+    std::vector<block> blocks;
     block currentblock;
     block nextblock;
     void lockblock();
     bool isblockoutside();
-    void rotateblock();
     bool blockfits();
-    void reset();
-    
+    void updatescore(int rowscleared);
 };

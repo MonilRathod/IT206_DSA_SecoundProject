@@ -8,6 +8,7 @@ game::game()
     currentblock = getrandomblock();
     nextblock = getrandomblock(); 
     gameover = false;
+    score = 0;
 }
  
 block game::getrandomblock()
@@ -42,7 +43,10 @@ void game::handleinput()
             break;
         case KEY_UP:
             rotateblock();
-            break;    
+            break;  
+        case KEY_SPACE:
+            harddrop();
+            break;      
     }
 }
 
@@ -82,6 +86,20 @@ void game::moveblockdown()
     }
 }
 
+void game::harddrop()
+{
+    if(!gameover)
+    {
+        while(!isblockoutside() && blockfits())
+        {
+            currentblock.move(1, 0);
+        }
+        currentblock.move(-1, 0);
+        lockblock();
+    }
+
+
+}
 void game::lockblock()
 {
     vector<position> tiles = currentblock.getcellposition();
@@ -93,13 +111,17 @@ void game::lockblock()
     if(blockfits() == false)
     {
         gameover = true;
+        currentblock.move(-1,0);
+        nextblock.id = 0;
+
         return;
     }
-    else
-    {
         nextblock = getrandomblock();
-    }
-    grid.clearfullrows();
+    
+
+    int linescleared = grid.clearfullrows();
+    updatescore(linescleared);
+
 }
 
 bool game::isblockoutside()
@@ -138,6 +160,27 @@ bool game::blockfits()
         }
     }
     return true;
+}
+
+void game::updatescore(int rowscleared)
+{
+    switch (rowscleared)
+    {
+    case 1:
+        score += 1;
+        break;
+    case 2:
+        score += 2;
+        break;    
+    case 3:
+        score += 3;
+        break;
+    case 4:
+        score += 4;
+        break;    
+    default:
+        break;
+    }
 }
 
 void game::reset()

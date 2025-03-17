@@ -11,7 +11,7 @@ class block
 {
 public:
 block();
-void draw();
+void draw(int offsetx,int offsety);
 void move(int row, int colum);
 vector<position> getcellposition();
 int id;

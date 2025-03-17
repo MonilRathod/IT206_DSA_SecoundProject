@@ -74,6 +74,7 @@ int Grid::clearfullrows()
         {
             clearrow(row);
             completed++;
+            
           
            
         }
