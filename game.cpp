@@ -4,7 +4,7 @@
 game::game()
 {
     grid = Grid();
-    blocks = {Iblock(),Lblock(),Jblock(),Oblock(),Sblock()};   
+    blocks = {Iblock(),Lblock(),Jblock(),Oblock(),Sblock(),Zblock(),Tblock()};     
     currentblock = getrandomblock();
     nextblock = getrandomblock(); 
     gameover = false;
@@ -38,7 +38,7 @@ void game::draw()
 
 void game::handleinput()
 {
-    int keypressed = GetKeyPressed();
+    keypressed = GetKeyPressed();
     if(gameover && keypressed == KEY_R)
     {
        reset();
@@ -59,7 +59,13 @@ void game::handleinput()
             break;  
         case KEY_SPACE:
             harddrop();
-            break;      
+            break;  
+        case KEY_P:
+            gamepause=true;    
+            break;   
+        case KEY_ENTER:
+            gameresume=true;    
+            break;
     }
 }
 

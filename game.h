@@ -19,6 +19,9 @@ public:
     void harddrop();
     bool gameover;
     int score;
+    bool gamepause;
+    bool gameresume=false;
+    int keypressed;
 
 private:
     std::vector<block> blocks;

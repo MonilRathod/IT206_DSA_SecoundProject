@@ -50,6 +50,42 @@ build CMakeFiles/tetris.dir/main.cpp.obj: CXX_COMPILER__tetris_unscanned_ C$:/Us
   OBJECT_DIR = CMakeFiles\tetris.dir
   OBJECT_FILE_DIR = CMakeFiles\tetris.dir
 
+build CMakeFiles/tetris.dir/grid.cpp.obj: CXX_COMPILER__tetris_unscanned_ C$:/Users/M416/Desktop/IT206_DSA_SecoundProject/grid.cpp || cmake_object_order_depends_target_tetris
+  DEP_FILE = CMakeFiles\tetris.dir\grid.cpp.obj.d
+  INCLUDES = -isystem C:/Users/M416/vcpkg/installed/x64-windows/include
+  OBJECT_DIR = CMakeFiles\tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles\tetris.dir
+
+build CMakeFiles/tetris.dir/colors.cpp.obj: CXX_COMPILER__tetris_unscanned_ C$:/Users/M416/Desktop/IT206_DSA_SecoundProject/colors.cpp || cmake_object_order_depends_target_tetris
+  DEP_FILE = CMakeFiles\tetris.dir\colors.cpp.obj.d
+  INCLUDES = -isystem C:/Users/M416/vcpkg/installed/x64-windows/include
+  OBJECT_DIR = CMakeFiles\tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles\tetris.dir
+
+build CMakeFiles/tetris.dir/block.cpp.obj: CXX_COMPILER__tetris_unscanned_ C$:/Users/M416/Desktop/IT206_DSA_SecoundProject/block.cpp || cmake_object_order_depends_target_tetris
+  DEP_FILE = CMakeFiles\tetris.dir\block.cpp.obj.d
+  INCLUDES = -isystem C:/Users/M416/vcpkg/installed/x64-windows/include
+  OBJECT_DIR = CMakeFiles\tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles\tetris.dir
+
+build CMakeFiles/tetris.dir/blocks.cpp.obj: CXX_COMPILER__tetris_unscanned_ C$:/Users/M416/Desktop/IT206_DSA_SecoundProject/blocks.cpp || cmake_object_order_depends_target_tetris
+  DEP_FILE = CMakeFiles\tetris.dir\blocks.cpp.obj.d
+  INCLUDES = -isystem C:/Users/M416/vcpkg/installed/x64-windows/include
+  OBJECT_DIR = CMakeFiles\tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles\tetris.dir
+
+build CMakeFiles/tetris.dir/position.cpp.obj: CXX_COMPILER__tetris_unscanned_ C$:/Users/M416/Desktop/IT206_DSA_SecoundProject/position.cpp || cmake_object_order_depends_target_tetris
+  DEP_FILE = CMakeFiles\tetris.dir\position.cpp.obj.d
+  INCLUDES = -isystem C:/Users/M416/vcpkg/installed/x64-windows/include
+  OBJECT_DIR = CMakeFiles\tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles\tetris.dir
+
+build CMakeFiles/tetris.dir/game.cpp.obj: CXX_COMPILER__tetris_unscanned_ C$:/Users/M416/Desktop/IT206_DSA_SecoundProject/game.cpp || cmake_object_order_depends_target_tetris
+  DEP_FILE = CMakeFiles\tetris.dir\game.cpp.obj.d
+  INCLUDES = -isystem C:/Users/M416/vcpkg/installed/x64-windows/include
+  OBJECT_DIR = CMakeFiles\tetris.dir
+  OBJECT_FILE_DIR = CMakeFiles\tetris.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target tetris
@@ -58,7 +94,7 @@ build CMakeFiles/tetris.dir/main.cpp.obj: CXX_COMPILER__tetris_unscanned_ C$:/Us
 #############################################
 # Link the executable tetris.exe
 
-build tetris.exe: CXX_EXECUTABLE_LINKER__tetris_ CMakeFiles/tetris.dir/main.cpp.obj | C$:/Users/M416/vcpkg/installed/x64-windows/lib/raylib.lib C$:/Users/M416/vcpkg/installed/x64-windows/lib/raylib.lib
+build tetris.exe: CXX_EXECUTABLE_LINKER__tetris_ CMakeFiles/tetris.dir/main.cpp.obj CMakeFiles/tetris.dir/grid.cpp.obj CMakeFiles/tetris.dir/colors.cpp.obj CMakeFiles/tetris.dir/block.cpp.obj CMakeFiles/tetris.dir/blocks.cpp.obj CMakeFiles/tetris.dir/position.cpp.obj CMakeFiles/tetris.dir/game.cpp.obj | C$:/Users/M416/vcpkg/installed/x64-windows/lib/raylib.lib C$:/Users/M416/vcpkg/installed/x64-windows/lib/raylib.lib
   LINK_LIBRARIES = C:/Users/M416/vcpkg/installed/x64-windows/lib/raylib.lib  C:/Users/M416/vcpkg/installed/x64-windows/lib/raylib.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\tetris.dir
   POST_BUILD = cd .

@@ -1,3 +1,13 @@
 # ninja log v6
 3	396	7638541679181185	CMakeFiles/tetris.dir/main.cpp.obj	abe516a09f98ab6c
 399	560	7638541683002601	tetris.exe	20df1336e5b0467d
+7	603	7639774780652167	build.ninja	97633b25e0eb3ee2
+7	603	7639774780652167	C:/Users/M416/Desktop/IT206_DSA_SecoundProject/cmake_install.cmake	97633b25e0eb3ee2
+50	1269	7639774782121030	CMakeFiles/tetris.dir/blocks.cpp.obj	8b695a82c34121d
+56	1271	7639774782236513	CMakeFiles/tetris.dir/position.cpp.obj	67c054f1a481380f
+37	1276	7639774782056586	CMakeFiles/tetris.dir/colors.cpp.obj	24d8c2779ea27cc5
+43	1315	7639774782121030	CMakeFiles/tetris.dir/block.cpp.obj	3af456cdad262d6d
+30	1399	7639774781920814	CMakeFiles/tetris.dir/grid.cpp.obj	195f875cd4bff624
+23	1478	7639774781920814	CMakeFiles/tetris.dir/main.cpp.obj	abe516a09f98ab6c
+64	1748	7639774782300102	CMakeFiles/tetris.dir/game.cpp.obj	bbe328f6844e9576
+1749	1993	7639774799160207	tetris.exe	9b2c5686f1654084
