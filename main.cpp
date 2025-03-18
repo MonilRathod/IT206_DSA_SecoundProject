@@ -5,6 +5,7 @@
 
 double lastupdatetime = 0;
 
+
 bool eventtriggered(double interval)
 {
     double currenttime = GetTime();
