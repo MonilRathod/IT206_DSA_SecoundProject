@@ -44,7 +44,7 @@ int main()
             Game.gameresume=false;
         }
 
-        if(eventtriggered(std::max(0.1, acd - Game.score * 0.01)))
+        if(eventtriggered(std::max(0.1, acd - Game.score * 0.001)))
         {
             Game.moveblockdown();
         }
