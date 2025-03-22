@@ -22,7 +22,7 @@ int main()
     InitWindow(500, 620, "TETRIS");
     SetTargetFPS(60);
 
-    Font font = LoadFontEx("resources/ARCADECLASSIC.TTF", 64, 0, 0);
+    Font font = LoadFontEx("c:/Users/M416/Desktop/IT206_DSA_SecoundProject/ARCADECLASSIC.TTF", 64, 0, 0);
 
 
     game Game = game();
@@ -56,7 +56,7 @@ int main()
         char Text[10];
         snprintf(Text, sizeof(Text), "%d", Game.score);
         Vector2 textsize = MeasureTextEx(font, Text, 38, 2);
-        DrawTextEx(font, Text, {310 + (170 - textsize.x)/2, 65}, 38, 2, WHITE);
+        DrawTextEx(font, Text, {320 + (170 - textsize.x)/2, 65}, 38, 2, WHITE);
 
 
 
@@ -65,19 +65,19 @@ int main()
 
         if(Game.gameover==true)
         {
-            DrawTextEx(font, "GameOver", {320, 450}, 38, 2, WHITE);
-            DrawTextEx(font, "Presh R to Restart", {317, 500}, 17, 2, WHITE);
+            DrawTextEx(font, "GameOver", {317, 450}, 38, 2, WHITE);
+            DrawTextEx(font, "Presh R to Restart", {315, 500}, 18, 2, WHITE);
         }
         else if(acd==1000000)
         {
             DrawTextEx(font, "Pause", {345, 450}, 38, 2, WHITE);
-            DrawTextEx(font, "Presh Ent to Resume", {317, 500}, 15, 2, WHITE);
+            DrawTextEx(font, "Presh Ent to Resume", {315, 500}, 17, 2, WHITE);
             Game.gamepause=false;
         }
         else if(acd<=0.5)
         {
-            DrawTextEx(font, "TETRIS", {330, 450}, 38, 2, WHITE);
-            DrawTextEx(font, "Presh P to Pause", {325, 500}, 17, 2, WHITE);
+            DrawTextEx(font, "TETRIS", {340, 450}, 38, 2, WHITE);
+            DrawTextEx(font, "Presh P to Pause", {318, 500}, 20, 2, WHITE);
         }
         Game.draw();
         EndDrawing();
