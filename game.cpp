@@ -10,7 +10,7 @@ game::game()
     gameover = false;
     score = 0;
 }
- 
+
 block game::getrandomblock()
 {
     int random = GetRandomValue(0,blocks.size()-1);
@@ -126,15 +126,77 @@ void game::lockblock()
     {
         grid.grid[item.row][item.colums] = currentblock.id;
     }
+    if(!gameover){
     currentblock = nextblock;
-    if(blockfits() == false)
-    {
-        gameover = true;
-        currentblock.move(-1,0);
-        nextblock.id = 0;
+    }
 
+    if(blockfits() == false)
+    { 
+        gameover = true;
+        bool empty = true;
+        for(int i = 0; i < 10; i++) {
+            if(!grid.iscellempty(0, i)) {
+                empty = false;
+                break;
+            }
+        }
+        if(!empty)
+        {    
+         switch(currentblock.id)
+         {
+        case 1:
+            currentblock.move(-2,0);
+            break;
+        case 2:
+            currentblock.move(-2,0);
+            break;
+        case 3:
+            currentblock.move(-1,0);
+            break;
+        case 4:
+            currentblock.move(-2,0);
+            break;
+        case 5:
+            currentblock.move(-2,0);
+            break;
+        case 6:
+            currentblock.move(-2,0);
+            break;
+        case 7:
+            currentblock.move(-2,0);
+            break;
+         }
+}
+else
+{
+    switch(currentblock.id)
+         {
+        case 1:
+            currentblock.move(-1,0);
+            break;
+        case 2:
+            currentblock.move(-1,0);
+            break;
+        case 3:
+            currentblock.move(0,0);
+            break;
+        case 4:
+            currentblock.move(-1,0);
+            break;
+        case 5:
+            currentblock.move(-1,0);
+            break;
+        case 6:
+            currentblock.move(-1,0);
+            break;
+        case 7:
+            currentblock.move(-1,0);
+            break;
+         }
+}
         return;
     }
+        
         nextblock = getrandomblock();
     
 
