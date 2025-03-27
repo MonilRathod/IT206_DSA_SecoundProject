@@ -71,6 +71,7 @@ This project is a simple implementation of the classic Tetris game using the Ray
 ## Project Members
 
 - Monil Rathod (ID: 202101409)
+- Manush Jada  (ID: 202401070)
 
 ## Acknowledgements
 
